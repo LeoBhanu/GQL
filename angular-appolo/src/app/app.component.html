@@ -1,0 +1,19 @@
+<!-- <mat-progress-bar mode="indeterminate" *ngIf="IsWait"></mat-progress-bar> -->
+<h2>GraphQL Table</h2>
+<table>
+  <thead>
+      <th>Sno</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>User</th>
+  </thead>
+  <tbody style="text-align: center;">
+      <tr *ngFor="let post of posts;index as i">
+          <td>{{i+1}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.description}}</td>
+          <td>{{post.creator.name}}</td>
+      </tr>
+  </tbody>
+</table>
+  <router-outlet></router-outlet>
